@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi tiền</title>
+</head>
+<h1 style="text-align: center">Ứng dụng chuyển đổi tiền tệ</h1>
+<body>
+<label>Amount<br><input type="number" name="giaitri" value="0" id="tien"></label><br><br>
+<label>From Currency</label><br>
+<select >
+    <option id="USA">Dollar Mỹ</option>
+</select><br><br>
+<label>To Currency</label><br>
+<select id="quocgia">
+    <option id="USD">USD</option>
+    <option id="VND">VND</option>
+</select><br><br>
+<input type="button" onclick="showmessage()" value="Convert">
+<p id="inRa"></p>
+<script>
+    function showmessage() {
+        let tien = document.getElementById("tien").value;
+        let USA = document.getElementById("quocgia").value;
+        if(USA === "USD"){
+            result = tien;
+        }
+        else{
+            result=tien*23000;}
+        document.getElementById("inRa").innerHTML = "Result " + result;
+    }
+</script>
+</body>
+</html>

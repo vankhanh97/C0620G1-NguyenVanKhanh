@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        function showMessage() {
+            document.write("<3")
+        }
+        function showMessage1() {
+            let a = Math.round(Math.random()*window.innerHeight);
+            let b = Math.round(Math.random()*window.innerWidth);
+            document.getElementById("n").style.top = a + 'px';
+            document.getElementById("n").style.left = b + 'px';
+
+        }
+    </script>
+</head>
+<body>
+<h1 style="position: absolute; left: 300px; top: 100px; color: pink">Do You Love Me?</h1>
+<form style="text-align: center">
+    <input id="y" type="button" onclick="showMessage()" value="Yes" style="position: absolute; left: 300px; top: 200px" >
+    <input id="n" type="button" value="No" onmouseover="showMessage1()" style="position: absolute; left: 370px; top: 200px">
+</form>
+
+</body>
+</html>

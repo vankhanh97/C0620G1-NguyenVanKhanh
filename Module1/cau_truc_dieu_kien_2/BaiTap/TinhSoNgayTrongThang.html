@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhapSoThang"/>
+<input type="button" value="Hiển thị ngày" onclick="showmessage()"/>
+<p id="hienThi"></p>
+<script>
+    function showmessage() {
+        let a = parseInt(document.getElementById("nhapSoThang").value);
+        switch (a) {
+            case 1:
+                document.getElementById("hienThi").innerHTML = "Tháng 1 có 31 ngày";
+                break;
+            case 2:
+                document.getElementById("hienThi").innerHTML = "Tháng 2 có 28 ngày";
+                break;
+            case 3:
+                document.getElementById("hienThi").innerHTML = "Tháng 3 có 31 ngày";
+                break;
+            case 4:
+                document.getElementById("hienThi").innerHTML = "Tháng 4 có 30 ngày";
+                break;
+            case 5:
+                document.getElementById("hienThi").innerHTML = "Tháng 5 có 31 ngày";
+                break;
+            case 6:
+                document.getElementById("hienThi").innerHTML = "Tháng 6 có 30 ngày";
+                break;
+            case 7:
+                document.getElementById("hienThi").innerHTML = "Tháng 7 có 31 ngày";
+                break;
+            case 8:
+                document.getElementById("hienThi").innerHTML = "Tháng 8 có 31 ngày";
+                break;
+            case 9:
+                document.getElementById("hienThi").innerHTML = "Tháng 9 có 30 ngày";
+                break;
+            case 10:
+                document.getElementById("hienThi").innerHTML = "Tháng 10 có 31 ngày";
+                break;
+            case 11:
+                document.getElementById("hienThi").innerHTML = "Tháng 11 có 30 ngày";
+                break;
+            case 12:
+                document.getElementById("hienThi").innerHTML = "Tháng 1 có 31 ngày";
+                break;
+        }
+    }
+</script>
+</body>
+</html>

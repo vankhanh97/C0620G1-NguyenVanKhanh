@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input id="manHinh1" type="text" />
+<input id="manHinh2" type="text" /><br><br>
+<input type="button" value="+" onclick="showmessage()">
+<input type="button" value="-" onclick="showmessage1()">
+<input type="button" value="x" onclick="showmessage2()">
+<input type="button" value="/" onclick="showmessage3()">
+<script>
+
+function showmessage() {
+    let a = parseFloat(document.getElementById("manHinh1").value);
+    let b = parseFloat(document.getElementById("manHinh2").value);
+    let num1 = a + b ;
+    document.getElementById("hienThi").innerHTML= num1;
+}
+function showmessage1() {
+    let a = parseInt(document.getElementById("manHinh1").value);
+    let b = parseInt(document.getElementById("manHinh2").value);
+    let num1 = a -b ;
+    document.getElementById("hienThi").innerHTML= num1;
+}
+function showmessage2() {
+    let a = parseInt(document.getElementById("manHinh1").value);
+    let b = parseInt(document.getElementById("manHinh2").value);
+    let num1 = a * b ;
+    document.getElementById("hienThi").innerHTML= num1;
+}function showmessage3() {
+    let a = parseInt(document.getElementById("manHinh1").value);
+    let b = parseInt(document.getElementById("manHinh2").value);
+    let num1 = a / b ;
+    document.getElementById("hienThi").innerHTML= num1;
+}
+</script>
+<p id="hienThi"></p>
+</body>
+</html>
