@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    let doDaiMang1 = parseInt(prompt("Nhập độ dài của mảng 1"));
+    let daySoNguyen1 = new Array(doDaiMang1);
+    let a = 0;
+    while (a < doDaiMang1) {
+        let soNguyen1 = prompt("Nhập vào phần tử  " + a);
+        daySoNguyen1[a] = soNguyen1;
+        a++;
+    }
+    let doDaiMang2 = parseInt(prompt("Nhập độ dài của mảng 2"));
+    let daySoNguyen2 = new Array(doDaiMang2);
+    let b = 0;
+    while (b < doDaiMang2) {
+        let soNguyen2 = prompt("Nhập vào phần tử  " + b);
+        daySoNguyen2[b] = soNguyen2;
+        b++;
+    }
+    let c = daySoNguyen2.concat(daySoNguyen1);
+    document.write(c)
+    </script>
+</body>
+</html>

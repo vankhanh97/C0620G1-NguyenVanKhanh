@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let doDaiMang = parseInt(prompt("Nhập độ dài của mảng "));
+    let daySoNguyen= new Array(doDaiMang);
+    let a = 0;
+    while (a <doDaiMang){
+        let soNguyen = prompt("Nhập vào phần tử  " + a );
+        daySoNguyen[a]=soNguyen;
+        a++;}
+        document.write(daySoNguyen.reverse());
+</script>
+</body>
+</html>

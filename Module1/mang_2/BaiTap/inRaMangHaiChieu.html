@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let doDaiMang = parseInt(prompt("Nhập độ dài của mảng"));
+    let manga = new Array(doDaiMang);
+    for (let i = 0; i < doDaiMang; i++) {
+        manga[i] = new Array(doDaiMang);
+        let b = parseInt(prompt("Nhập độ dài của mảng"));
+        for (let j = 0; j < b; j++) {
+            let item = prompt("Thứ [" + i + "] [" + j + "]");
+            manga[i][j] = item
+        }
+    }
+    for (let h = 0; h < manga.length; h++) {
+        document.write("row " + h + "<br>");
+        for (let k = 0; k < manga[h].length; k++) {
+            document.write(manga[h][k] + "<br>");
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<h1 style="text-align: center"> Từ điển </h1>
+<input type="text" id="layTu">
+<button onclick="hienThiTu()">Dịch</button>
+
+</body>
+<script>
+    let tiengViet = ["con chó", "con mòe", "con heo", "con gà", "con zịt"];
+    let tiengAnh = ["dog", "cat", "pig", "chicken", "duck"];
+
+    function hienThiTu() {
+        let layTuDeDich = document.getElementById("layTu").value;
+        for (let x = 0; x < tiengViet.length; x++) {
+            if (layTuDeDich == tiengViet[x]) {
+                document.write(tiengAnh[x]);
+                break;
+            }
+            if (x  ==tiengViet.length-1) {
+                document.write("không tìm thấy từ")
+            }
+
+        }
+    }
+</script>
+</html>

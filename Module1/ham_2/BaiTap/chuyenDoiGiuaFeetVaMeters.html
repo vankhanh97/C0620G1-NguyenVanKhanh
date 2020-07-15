@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<label>Feet: <input type="text" id="feet"></label>
+<label>Meters: <input type="text" id="meters"></label><br><br>
+<button style="margin-left: 40px" onclick="chuyenSangMeters()">to Meters</button>
+<button style="margin-left: 160px" onclick="chuyenSangFeet()">to Feet</button>
+<script>
+    function chuyenSangMeters() {
+        let inputMeters = document.getElementById('feet').value;
+         ketQuaMeters = inputMeters * 0.305;
+        console.log(ketquaMeters);
+        return ketQuaMeters;
+    }
+</script>
+</body>
+</html>

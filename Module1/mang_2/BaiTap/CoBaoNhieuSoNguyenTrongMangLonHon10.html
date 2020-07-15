@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let doDaiMang = parseInt(prompt("Nhập độ dài của mảng "));
+    let daySoNguyen= new Array(doDaiMang);
+    let demSoLonHon10 = 0;
+    let a = 0;
+    while (a <doDaiMang){
+       let soNguyen = prompt("Nhập vào phần tử  " + a );
+        daySoNguyen[a]=soNguyen;
+        a++;
+    }
+    for (let i = 0;i < daySoNguyen.length;i++){
+        if (daySoNguyen[i] >= 10 ){
+            demSoLonHon10 += 1 ;
+        }
+    }document.write("có " + demSoLonHon10 + " số nguyên lớn hơn 10 ");
+</script>
+</body>
+</html>
