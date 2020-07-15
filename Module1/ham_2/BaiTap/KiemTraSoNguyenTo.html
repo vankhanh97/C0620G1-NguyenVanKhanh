@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm Tra Số Nguyên Tố</title>
+</head>
+<body>
+
+<input type="number" id="nhapSNT">
+<input type="button" onclick="kiemTra()" value="Kiểm tra">
+<script>
+    function kiemTra() {
+        let number = document.getElementById("nhapSNT").value;
+        let flag = true;
+        if (number < 2) {
+            flag = false;
+        } else if (number == 2) {
+            flag = true;
+        } else if (number % 2 == 0) {
+            flag = false;
+        } else if (number > 2) {
+            for (let i = 3; i < number; i++) {
+                if (number % i == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        if (flag) {
+            document.write("Là số nguyên tố")
+        } else {
+            document.write("Không phải là số nguyên tố");
+        }
+    }
+</script>
+</body>
+</html>
