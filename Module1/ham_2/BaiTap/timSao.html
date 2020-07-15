@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang1= ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+    let mang2= ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+
+    function hienThiTu() {
+        let layTuDeDich = prompt("Nhập tên chòm sao: ");
+        for (let x = 0; x < mang1.length; x++) {
+            if (layTuDeDich == mang1[x]) {
+                document.write(mang2[x]);
+                break;
+            }
+            if (x  ==mang1.length-1) {
+                document.write("không tìm thấy từ")
+            }
+
+        }
+
+    }hienThiTu()
+</script>
+</body>
+</html>

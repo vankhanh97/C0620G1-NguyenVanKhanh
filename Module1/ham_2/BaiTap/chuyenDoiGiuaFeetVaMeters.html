@@ -9,17 +9,14 @@
 <label>Meters: <input type="text" id="meters"></label><br><br>
 <button style="margin-left: 40px" onclick="doiSangMeters()">to Meters</button>
 <button style="margin-left: 160px" onclick="doiSangFeet()">to Feet</button><br><br>
-<label id = hienThi1 style="margin-left: 40px"></label>
-<label id = hienThi2 style="margin-left: 200px"></label>
 <script>
     function doiSangMeters() {
         let inputMeters = document.getElementById("feet").value;
-        document.getElementById("hienThi1").innerHTML= inputMeters * 0.305+" m";
+        document.getElementById("meters").value= inputMeters * 0.305;
     }
     function doiSangFeet() {
         let inputFeet = document.getElementById("meters").value;
-        document.getElementById("hienThi2").innerHTML= 3.279 * inputFeet+" ft";
-        return ketQuaFeet;
+        document.getElementById("feet").value= 3.279 * inputFeet;
     }
 </script>
 </body>
