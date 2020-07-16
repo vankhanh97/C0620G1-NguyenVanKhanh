@@ -7,14 +7,14 @@
 <body>
 <script>
     let a = parseInt(prompt("Tính giai thừa của: "));
-    tinh(a);
-
     function tinh() {
         let b = 1;
-        for (let i = 1; i <= a; i++)
+        for (let i = 1; i <= a; i++) {
             b = b * i;
-        alert("Giai thừa của " + a + " là " + b);
+        }
+        return b;
     }
+alert("Giai thừa của " + a + " là " + tinh(a));
 </script>
 </body>
 </html>
