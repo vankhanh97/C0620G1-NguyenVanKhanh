@@ -3,52 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <title>Quản lý sản phẩm</title>
-    <style>
-        table,th,td{
-            border: 1px solid #5f6062;
-        }
-    </style>
+    <!--    <style>-->
+    <!--        table,th,td{-->
+    <!--            border: 1px solid #5f6062;-->
+    <!--        }-->
+    <!--    </style>-->
 </head>
 <body>
-<h1>Danh sách sản phẩm:</h1>
-<input type="button" onclick="them()" value="Thêm">
-<div id="trang"></div>
-<script>
-    let dsSanPham=['Coca','Pepsi','7up','Mirinda'];
-    reLoad();
-    function reLoad() {
-        let table="<table cellpadding='0' cellspacing='0'>";
-        for (let i = 0; i < dsSanPham.length; i++) {
-            table += "<tr>";
-            for (let j = 1; j <= 3; j++) {
-                if (j === 1) {
-                    table += "<td>" + dsSanPham[i] + "</td>"
-                }
-                if (j === 2) {
-                    table += "<td>" + "<input type='button' style='color: #e8ae32' value='Edit' onclick='eDit("+i+")'>" + "</td>"
-                }
-                if (j === 3) {
-                    table += "<td>" + "<input type='button' style='color: #35d61e' value='Delete' onclick='Del("+i+")'>" + "</td>"
-                }
+<!--<h1>Danh sách sản phẩm:</h1>-->
+<!--<input type="button" onclick="them()" value="Thêm">-->
+<!--<div id="trang"></div>-->
+<!--<script>-->
+<!--    let dsSanPham=['Coca','Pepsi','7up','Mirinda'];-->
+<!--    reLoad();-->
+<!--    function reLoad() {-->
+<!--        let table="<table cellpadding='0' cellspacing='0'>";-->
+<!--        for (let i = 0; i < dsSanPham.length; i++) {-->
+<!--            table += "<tr>";-->
+<!--            for (let j = 1; j <= 3; j++) {-->
+<!--                if (j === 1) {-->
+<!--                    table += "<td>" + dsSanPham[i] + "</td>"-->
+<!--                }-->
+<!--                if (j === 2) {-->
+<!--                    table += "<td>" + "<input type='button' style='color: #e8ae32' value='Edit' onclick='eDit("+i+")'>" + "</td>"-->
+<!--                }-->
+<!--                if (j === 3) {-->
+<!--                    table += "<td>" + "<input type='button' style='color: #35d61e' value='Delete' onclick='Del("+i+")'>" + "</td>"-->
+<!--                }-->
+<!--            }-->
+<!--            table += "</tr>";-->
+<!--        }-->
+<!--        table += "</table>";-->
+<!--        document.getElementById("trang").innerHTML=table;-->
+<!--    }-->
+<!--    function them() {-->
+<!--        let news=prompt('Nhập tên sản phẩm muốn thêm:');-->
+<!--        dsSanPham.push(news);-->
+<!--        reLoad()-->
+<!--    }-->
+<!--    function eDit(y) {-->
+<!--        dsSanPham[y]=prompt('Nhập tên muốn chỉnh sửa');-->
+<!--        reLoad()-->
+<!--    }-->
+<!--    function Del(x) {-->
+<!--        dsSanPham.splice(x,1);-->
+<!--        reLoad();-->
+<!--    }-->
+<input type="text" id="sanPham">
+<input type="button" value="Thêm Sản Phẩm" onclick="themMoiSP()"><br>
+<label style="margin-right: 100px">Số lượng sản phẩm: </label><span id="soLuong">3</span>
+<p id="hienThi">
+    <script>
+        let danhSachSP = ["sam sung", "nokia", "iphone"];
+        hienThi();
+
+        function themMoiSP() {
+            let tenSP = document.getElementById("sanPham").value;
+            if (tenSP == "") {
+                alert("bạn chưa nhập tên sản phẩm")
+            } else {
+                danhSachSP.push(tenSP);
+                document.getElementById("sanPham").value = "";
             }
-            table += "</tr>";
+            hienThi();
         }
-        table += "</table>";
-        document.getElementById("trang").innerHTML=table;
-    }
-    function them() {
-        let news=prompt('Nhập tên sản phẩm muốn thêm:');
-        dsSanPham.push(news);
-        reLoad()
-    }
-    function eDit(y) {
-        dsSanPham[y]=prompt('Nhập tên muốn chỉnh sửa');
-        reLoad()
-    }
-    function Del(x) {
-        dsSanPham.splice(x,1);
-        reLoad();
-    }
-</script>
+
+        function xoa(id) {
+            let kiemTraXoa = confirm("Bạn có muốn xóa sản phẩm " + danhSachSP[id]);
+            if (kiemTraXoa) {
+                danhSachSP.splice(id, 1);
+                hienThi();
+            } else {
+                alert("Bạn không muốn xóa sản phẩm này")
+            }
+
+
+        }
+
+        function sua(id) {
+            let tenMoiSP = prompt("Nhập tên bạn muốn sửa");
+            if (tenMoiSP == null) {
+                alert("bạn không muốn sửa ")
+            } else if (tenMoiSP == "") {
+                alert("Làm ơn nhập tên sản phẩm")
+            } else {
+                danhSachSP[id] = tenMoiSP;
+            }
+
+            hienThi();
+        }
+
+        function hienThi() {
+            let bang = '<table border="1">\n' +
+                '    <tr>\n' +
+                '        <th> Số thứ tự</th>\n' +
+                '        <th> Tên Sản phẩm</th>\n' +
+                '        <th> Chức năng sửa</th>\n' +
+                '        <th> Chức năng xóa</th>\n' +
+                '    </tr>'
+            for (let i = 0; i < danhSachSP.length; i++) {
+                bang += ' <tr>\n' +
+                    '        <td> ' + (i + 1) + '</td>\n' +
+                    '        <td>' + danhSachSP[i] + '</td>\n' +
+                    '        <td><input type="button" onclick="sua(' + i + ')" value="Sửa"></td>\n' +
+                    '         <td><input type="button" onclick="xoa(' + i + ')" value="Xóa"></td>\n' +
+                    '    </tr>'
+            }
+            bang += '</table>';
+            document.getElementById("hienThi").innerHTML = bang;
+            document.getElementById("soLuong").innerHTML = danhSachSP.length;
+        }
+
+    </script>
 </body>
 </html>

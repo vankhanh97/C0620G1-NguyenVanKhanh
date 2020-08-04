@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    class temperature {
+        constructor(temperature) {
+            this.temperature = temperature;
+
+        }
+        toDoC(){
+            return 9/5 * this.temperature + 32;
+        }
+        toDoF(){
+            return (this.temperature - 32)/1.8;
+        }
+        toK(){
+            return this.temperature + 273.15;
+        }
+    }
+
+    let a = parseInt(prompt("Nhập nhiệt độ cần đổi: "));
+    let chuyenNhietDo = new temperature(a);
+    document.write(chuyenNhietDo.toDoF()+" Độ F <br>");
+    document.write(chuyenNhietDo.toK()+" Độ K");
+</script>
+
 </body>
 </html>

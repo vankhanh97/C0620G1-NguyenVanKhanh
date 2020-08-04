@@ -2,9 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<div>
+    <input id="eat" type="button" value="Ăn" onclick="eat()">
+    <input id="genderCheck" type="button" value="Kiểm tra giới tính" onclick="Human1.genderCheck()">
+    <input id="weightCheck" type="button" value="Kiểm tra cân nặng" onclick="Human1.weightCheck()">
+    <input id="say" type="button" value="Nói" onclick="Human1.say()">
+    <input id="checkStatus" type="button" value="Kiểm tra tình trạng" onclick="Human1.checkStatus()"><br>
+<label id="hienThi">Táo còn 10</label>
+</div>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        decreaseAppleWeight() {
+            this.weight -= 1;
+            return this.weight;
+        }
+
+        showAppleValue() {
+            document.getElementById("hienThi").innerHTML="Táo còn " + this.weight
+        }
+
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        genderCheck() {
+            alert("là " + this.gender);
+        }
+
+        weightCheck() {
+            alert("Cân nặng là " + this.weight);
+        }
+
+        eatApple() {
+            this.weight += 1;
+            return this.weight;
+
+        }
+
+        say() {
+            alert("hello")
+        }
+
+        checkStatus() {
+            alert("Tên: " + this.name + ". " + "Giới tính: " + this.gender + ". " + "Cân nặng: " + this.weight)
+        }
+    }
+    function eat() {
+        if(Apple1.weight > 0) {
+            Human1.eatApple();
+            Apple1.decreaseAppleWeight();
+            Apple1.showAppleValue();
+        }
+        else {
+            alert("Táo chỉ còn cuống")
+        }
+    }
+    Human1 = new Human("Adam","Nam",70);
+    Apple1 = new Apple(10);
+</script>
+
 </body>
 </html>

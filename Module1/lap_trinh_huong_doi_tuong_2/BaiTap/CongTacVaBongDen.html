@@ -2,9 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<input type="button" value="Bật bóng đèn" onclick="lamp1.turnOn()">
+<input type="button" value="Tắt bóng đèn" onclick="lamp1.turnOff()">
+<input type="button" value="Kiểm tra bóng đèn bật hay tắt" onclick="hienThi()">
+<p id="turnOn"></p>
+<script>
+    class Lamp {
+        constructor(status) {
+            this.status = status;
+        }
+
+        turnOn() {
+            document.getElementById("turnOn").innerHTML=a;
+            this.status = true;
+
+        }
+
+        turnOff() {
+            document.getElementById("turnOn").innerHTML=b;
+            this.status = false;
+        }
+    }
+
+    class SwitchButton {
+        constructor(status) {
+            this.status = status;
+        }
+
+        switchOff() {
+            this.status = false;
+        }
+
+        switchOn() {
+            this.status = true;
+        }
+    }
+
+    let lamp1 = new Lamp(false);
+    let button = new SwitchButton(false);
+    var a = "<img src=\"https://cdn.pixabay.com/photo/2012/02/28/10/24/lamp-18223_960_720.jpg\">";
+    var b = "<img src= \"https://st.quantrimang.com/photos/image/2020/02/22/avatar-den-co-don.jpg\">";
+        function hienThi() {
+            if (lamp1.status) {
+                alert("Bóng đèn đang bật");
+            } else {
+                alert("Bóng đèn đang tắt");
+            }
+        }
+</script>
 </body>
 </html>

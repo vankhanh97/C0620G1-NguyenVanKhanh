@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    class Rectangle {
+        constructor(chieudai, chieurong) {
+            this.chieudai = chieudai;
+            this.chieurong = chieurong;
+        }
+        tinhDienTich() {
+         return this.chieudai * this.chieurong;
+        }
+    }
+    let a = parseInt(prompt("Nhập chiều dài HCN: "));
+    let b = parseInt(prompt("Nhập chiều rộng HCN: "));
+
+    let hcn1 = new Rectangle(a,b);
+alert(hcn1.tinhDienTich());
+</script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,8 +17,8 @@
     let rentDays = "";
     let typeServices = "";
     let typeRoom = "";
-    let total = "";
     let tempName = "";
+    let total = 500 * rentDays * (1 - disCount / 100);
     name = prompt("Input Name: ");
     name = name.trim().toLocaleLowerCase();
     for (let i = 0; i < name.length; i++) {
@@ -104,22 +104,19 @@
         tempAddress += address.charAt(j);
     }
     address = tempAddress;
-    // alert(tempAddress);
-    // let tempTypeCustomer = "";
+    let tempTypeCustomer = "";
     typeCustomer = parseInt(prompt("Input TypeCustomer" + "\n" +
         "1. Diamond" + "\n" +
         "2. Platinum" + "\n" +
         "3. Gold" + "\n" +
         "4. Silver" + "\n" +
         "5. Member"));
-    // typeCustomer = typeCustomer.trim();
-    // for (let k = 0; k < typeCustomer.length; k++) {
-    //     if (typeCustomer.charAt(k) === " " && typeCustomer.charAt(k + 1) === " ") {
-    //         continue;
-    //     }
-    //     tempTypeCustomer += typeCustomer.charAt(k);
-    // }
-    // alert(tempTypeCustomer);
+    for (let k = 0; k < typeCustomer.length; k++) {
+        if (typeCustomer.charAt(k) === " " && typeCustomer.charAt(k + 1) === " ") {
+            continue;
+        }
+        tempTypeCustomer += typeCustomer.charAt(k);
+    }
     disCount = prompt("Input Discount: ");
     do {
         let quantityInclude = prompt("Input quantityInclude: ");
@@ -155,7 +152,6 @@
         "1. Vip" + "\n" +
         "2. Business" + "\n" +
         "3. Normal"));
-    // let total = 500 * rentDays * (1 - disCount / 100);
     alert("1. Họ và tên: " + name + "\n" +
         "2. Số CMND: " + cmnd + "\n" +
         "3. Ngày tháng năm sinh: " + birthday + "\n" +
