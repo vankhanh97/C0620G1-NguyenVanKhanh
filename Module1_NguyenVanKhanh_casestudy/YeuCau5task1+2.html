@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayLisCustomer = [];
+    function displayMainMenu() {
+        let choose = parseInt(prompt("1.Add New Customer." + "\n" +
+            "2.Display Information Customer." + "\n" +
+            "3.Edit Information Customer." + "\n" +
+            "4.Delete Customer." + "\n" +
+            "5.Exit." + "\n"));
+        switch (choose) {
+            case 1: {
+                addNewCustomer();
+                break
+            }
+            case 2: {
+                displayCustomer();
+                break
+            }
+            case 3: {
+                break
+            }
+            case 4: {
+                break
+            }
+            case 5: {
+                break
+            }
+            default: {
+                alert("Failed")
+            }
+        }
+    }
+    function displayCustomer() {
+        let temp = "";
+        for (let i = 0; i < arrayLisCustomer.length; i++) {
+            temp += (i ) + ".Name:" + arrayLisCustomer[i][0] + "\n"
+            ;
+        }
+        let chooseDisplay = parseInt(prompt(temp));
+        alert("1.Tên:" + arrayLisCustomer[chooseDisplay][0] + "\n" +
+            "2.Cmnd:" + arrayLisCustomer[chooseDisplay][1] + "\n" +
+            "3.Ngày sinh" + arrayLisCustomer[chooseDisplay][2] + "\n" +
+            "4.địa chỉ email:" + arrayLisCustomer[chooseDisplay][3] + "\n" +
+            "5.Địa chỉ:" + arrayLisCustomer[chooseDisplay][4] + "\n" +
+            "6.loại dịch dụ:" + arrayLisCustomer[chooseDisplay][5] + "\n" +
+            "7.loại phòng:" + arrayLisCustomer[chooseDisplay][6] + "\n" +
+            "8.loai khách hàng" + arrayLisCustomer[chooseDisplay][7] + "\n" +
+            "9.giảm giá:" + arrayLisCustomer[chooseDisplay][8] + "\n" +
+            "10.số lượng đi kèm:" + arrayLisCustomer[chooseDisplay][9] + "\n" +
+            " 11.ngày thuê:" + arrayLisCustomer[chooseDisplay][10])
+    }
+    function addNewCustomer() {
+        let cusInfo = [];
+        let name = prompt("Input name:");
+        let cmnd = prompt("input cmnd");
+        let birthday = prompt("Input birthday:");
+        let address = prompt("Input address:");
+        let typeService = prompt("Input service :");
+        let typeRoom = prompt("Input typeroom:");
+        let typeCustomer = prompt("Input type customer:");
+        let discount = prompt("Input discoiunt:");
+        let quantityInclued = prompt("quantityInclued");
+        let rendDays = prompt("renddays");
+        cusInfo.push(name);
+        cusInfo.push(cmnd);
+        cusInfo.push(birthday);
+        cusInfo.push(address);
+        cusInfo.push(typeService);
+        cusInfo.push(typeRoom);
+        cusInfo.push(typeCustomer);
+        cusInfo.push(discount);
+        cusInfo.push(quantityInclued);
+        cusInfo.push(rendDays);
+        arrayLisCustomer.push(cusInfo);
+        alert("you added successfully");
+        displayMainMenu()
+    }
+    displayMainMenu()
+</script>
+</body>
+</html>
