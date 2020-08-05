@@ -1,4 +1,4 @@
-package VongLapTrongJava;
+package VongLapTrongJava.ThucHanh;
 import java.util.Scanner;
 public class KiemTraSoNT {
     public static void main(String[] args) {

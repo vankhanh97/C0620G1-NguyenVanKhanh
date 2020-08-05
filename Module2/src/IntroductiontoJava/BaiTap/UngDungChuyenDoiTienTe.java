@@ -1,4 +1,4 @@
-package IntroductiontoJava;
+package IntroductiontoJava.BaiTap;
 import java.util.Scanner;
 public class UngDungChuyenDoiTienTe {
     public static void main(String[] args) {

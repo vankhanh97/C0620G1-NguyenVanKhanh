@@ -1,4 +1,4 @@
-package IntroductiontoJava;
+package IntroductiontoJava.ThucHanh;
 
 public class KhaiBaoVaSuDungBien {
     public static void main(String[] args) {
