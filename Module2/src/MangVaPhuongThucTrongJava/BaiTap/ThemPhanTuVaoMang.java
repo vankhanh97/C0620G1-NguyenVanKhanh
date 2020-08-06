@@ -20,9 +20,8 @@ public class ThemPhanTuVaoMang {
         System.out.println("Thêm " + input + ". vào vị trí thứ " + index);
         int[] arr2 = new int[arr.length + 1];
         for (int j = 0; j < arr.length + 1; j++) {
-
             if (j == index) {
-                arr2[j] = index;
+                arr2[j] = input;
                 System.out.print(arr2[j] + " ");
             } else if (j > index) {
                 arr2[j] = arr[j-1];
