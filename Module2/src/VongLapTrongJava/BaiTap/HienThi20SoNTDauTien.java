@@ -1,6 +1,6 @@
 package VongLapTrongJava.BaiTap;
 
-public class HienThi20SoNTDauTien {
+public class    HienThi20SoNTDauTien {
     public static void main(String[] args) {
         System.out.println("Các số nguyên tố nhỏ hơn 20 là: ");
         for (int i = 0; i < 20; i++) {
