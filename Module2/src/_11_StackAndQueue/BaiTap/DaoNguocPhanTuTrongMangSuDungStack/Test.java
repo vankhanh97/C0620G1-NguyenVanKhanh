@@ -11,14 +11,17 @@ public class Test {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("Nhập phần tử của mảng: ");
+
             String input = scanner.nextLine();
             if (!input.equals("0")) {
                 myArray.push(input);
-                System.out.println(myArray);}
-            else
+                System.out.println(myArray);
+            } else
                 break;
-            }
-        System.out.println(myArray.pop());
+        }
+        while (!myArray.isEmpty()) {
+            System.out.print(myArray.pop()+" ");
         }
     }
+}
 
