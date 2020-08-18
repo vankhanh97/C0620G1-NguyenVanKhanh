@@ -6,9 +6,9 @@ public class Product {
 
     public Product(){}
 
-    public Product(int id,String productName){
+    public  Product(int id,String productName){
         this.id = id;
-        this.productName=productName;
+        this.productName =productName;
     }
 
     public int getId() {
@@ -19,12 +19,12 @@ public class Product {
         this.id = id;
     }
 
-    public String getProductName(String name) {
+    public  String getProductName(String name) {
         return productName;
     }
 
     public void setProductName(String productName) {
-        this.productName = productName;
+       this.productName = productName;
     }
 
     @Override

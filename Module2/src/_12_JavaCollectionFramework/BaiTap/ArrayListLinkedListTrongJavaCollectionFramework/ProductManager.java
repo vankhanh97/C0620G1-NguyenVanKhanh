@@ -11,25 +11,25 @@ public class ProductManager {
         for (Product item : arrProduct) {
             if (item.getId() == id) {
                 item.setProductName(name);
-
                 break;
             }
         }
     }
 
-    public static String searchByName(String name) {
+    public static void searchByName(String name) {
+
         for (Product item : arrProduct) {
-            if (item.getProductName(name).equals(name)) return "Tìm thấy " + item.getProductName(name);
+            if (item.getProductName(name).equals(name)) {
+                System.out.println("Tìm thấy " + item.getProductName(name));
+            }
         }
-        return "No product";
     }
 
-    public static String searchById(int id) {
-        for (Product item : arrProduct) {
-            if (item.getId() == id) return item.toString();
-        }
-        return "No product";
-    
+    public static void deleteById(int id) {
+        arrProduct.remove(id);
+        System.out.println("Mảng còn lại: "+"\n"+ arrProduct.toString());
     }
 }
+
+
 
