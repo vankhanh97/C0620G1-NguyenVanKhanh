@@ -41,6 +41,7 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
     protected TreeNode<E> createNewNode(E e) {
         return new TreeNode<>(e);
     }
+
     @Override
     public int getSize() {
         return size;
