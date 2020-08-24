@@ -1,7 +1,7 @@
 package _14_ThuatToanSapXep.ThucHanh;
 
 
-public class SapXepChen {
+public class SapXepLuaChon {
     static double[] list = {1, 9, 4.5, 6.6, 5.7, -4.5};
 
     public static void selectionSort(double[] list) {
