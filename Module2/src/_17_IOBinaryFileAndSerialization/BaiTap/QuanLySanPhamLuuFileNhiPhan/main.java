@@ -5,11 +5,10 @@ import java.util.Scanner;
 
 public class main {
 
-    public static void inSanPham() {
+    public static void hienThiSanPham() {
         try {
             BufferedInputStream bf = new BufferedInputStream(new FileInputStream("D:\\C0620G1-NguyenVanKhanh\\Module2\\src\\_17_IOBinaryFileAndSerialization\\BaiTap\\QuanLySanPhamLuuFileNhiPhan\\SanPham"));
             int lengh;
-
             while ((lengh = bf.read()) != -1) {
                 System.out.print((char) lengh);
             }
@@ -20,7 +19,7 @@ public class main {
 
     }
 
-    public static void outSanPham(String sanPham) {
+    public static void ghiSanPham(String sanPham) {
         try {
             if (sanPham.equals("clear")) {
                 FileOutputStream fileOutputStream = new FileOutputStream("D:\\C0620G1-NguyenVanKhanh\\Module2\\src\\_17_IOBinaryFileAndSerialization\\BaiTap\\QuanLySanPhamLuuFileNhiPhan\\SanPham");
@@ -44,10 +43,10 @@ public class main {
             System.out.println("\n" + "Nhập thông tin: ");
             String sanPham = scanner.nextLine();
             if (sanPham.equals("clear")) {
-                outSanPham(sanPham);
+                ghiSanPham(sanPham);
             } else
-                outSanPham(sanPham + "\n");
-            inSanPham();
+                ghiSanPham(sanPham + "\n");
+            hienThiSanPham();
         }
     }
 }
