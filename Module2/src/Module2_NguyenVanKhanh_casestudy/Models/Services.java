@@ -1,4 +1,4 @@
-package Module2_NguyenVanKhanh_casestudy.casestudy.src.Task1;
+package Module2_NguyenVanKhanh_casestudy.Models;
 
 public abstract class Services {
     public String id;

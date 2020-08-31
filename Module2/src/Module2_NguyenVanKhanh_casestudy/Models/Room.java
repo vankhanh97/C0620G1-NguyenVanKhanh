@@ -1,7 +1,5 @@
-package Module2_NguyenVanKhanh_casestudy.casestudy.src.Models;
+package Module2_NguyenVanKhanh_casestudy.Models;
 
-
-import Module2_NguyenVanKhanh_casestudy.casestudy.src.Task1.Services;
 
 public class Room extends Services {
     private String dichVuMienPhi;
