@@ -17,10 +17,10 @@ public class ValidateNews {
             Scanner scanner = new Scanner(new InputStreamReader(url.openStream()));
             scanner.useDelimiter("\\Z");
             String content = scanner.next();
-          //  System.out.println(content);
+            //  System.out.println(content);
             // remove all new line
             content = content.replaceAll("\\R", "");
-           // System.out.println(content);
+            // System.out.println(content);
             // regex
             Pattern p = Pattern.compile("<h3 class='news-item__title'> {20}<a {2}data-utm=\"(.*?)\" {2}href=\"(.*?)\" {2}title=\"(.*?)\"");
             Matcher m = p.matcher(content);
