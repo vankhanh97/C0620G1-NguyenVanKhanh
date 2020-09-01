@@ -31,6 +31,7 @@ public class Villa extends Services {
     private String tieuChuanPhong;
     private String dienTichHoBoi;
     private String soTang;
+
     public Villa() {
     }
 
@@ -45,13 +46,20 @@ public class Villa extends Services {
     @Override
     public void showInfor() {
         System.out.println("House có ID: " + id + "\n" +
-                "Tên dịch vụ: "+tenDichVu+ "\n" +
-                "Diện tích Sử Dụng: "+dienTichSuDung+ "\n" +
-                "Chi Phí Thuê: "+chiPhiThue+ "\n" +
-                "Số lượng người thuê tối đa: "+soLuongNguoiThueToiDa+ "\n" +
-                "Kiểu thuê: "+kieuThue+ "\n" +
-                "Tiêu chuẩn phòng: "+tieuChuanPhong+ "\n" +
-                "Số tầng: "+soTang+"\n"+
-                "Diện tích hồ bơi: "+dienTichHoBoi);
+                "Tên dịch vụ: " + tenDichVu + "\n" +
+                "Diện tích sử dụng: " + dienTichSuDung + "\n" +
+                "Chi phí thuê: " + chiPhiThue + "\n" +
+                "Số lượng người thuê tối đa: " + soLuongNguoiThueToiDa + "\n" +
+                "Kiểu thuê: " + kieuThue + "\n" +
+                "Tiêu chuẩn phòng: " + tieuChuanPhong + "\n" +
+                "Số tầng: " + soTang + "\n" +
+                "Diện tích hồ bơi: " + dienTichHoBoi);
+    }
+
+
+    @Override
+    public String toString() {
+        return id + "," + tenDichVu + "," + dienTichSuDung + ","+chiPhiThue +","+ soLuongNguoiThueToiDa +
+                "," + kieuThue + "," + tieuChuanPhong + "," + dienTichHoBoi + "," + soTang+"\n";
     }
 }

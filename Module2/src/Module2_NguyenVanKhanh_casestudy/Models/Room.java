@@ -15,7 +15,7 @@ public class Room extends Services {
     public Room() {
     }
 
-    public Room(String id, String tenDichVu, String dienTichSuDung, String chiPhiThue, String soLuongNguoiThueToiDa, String kieuThue ,String dichVuMienPhi) {
+    public Room(String id, String tenDichVu, String dienTichSuDung, String chiPhiThue, String soLuongNguoiThueToiDa, String kieuThue, String dichVuMienPhi) {
         super(id, tenDichVu, dienTichSuDung, chiPhiThue, soLuongNguoiThueToiDa, kieuThue);
         this.dichVuMienPhi = dichVuMienPhi;
 
@@ -24,11 +24,17 @@ public class Room extends Services {
     @Override
     public void showInfor() {
         System.out.println("House có ID: " + id + "\n" +
-                "Tên dịch vụ: "+tenDichVu+ "\n" +
-                "Diện tích Sử Dụng: "+dienTichSuDung+ "\n" +
-                "Chi Phí Thuê: "+chiPhiThue+ "\n" +
-                "Số lượng người thuê tối đa: "+soLuongNguoiThueToiDa+ "\n" +
-                "Kiểu thuê: "+kieuThue+ "\n"+"Dịch vụ miễn phí đi kèm: "+dichVuMienPhi);
+                "Tên dịch vụ: " + tenDichVu + "\n" +
+                "Diện tích sử dụng: " + dienTichSuDung + "\n" +
+                "Chi phí thuê: " + chiPhiThue + "\n" +
+                "Số lượng người thuê tối đa: " + soLuongNguoiThueToiDa + "\n" +
+                "Kiểu thuê: " + kieuThue + "\n" + "Dịch vụ miễn phí đi kèm: " + dichVuMienPhi);
 
+    }
+
+    @Override
+    public String toString() {
+        return id + "," + tenDichVu + "," + dienTichSuDung + "," + soLuongNguoiThueToiDa +
+                "," + kieuThue + "," + dichVuMienPhi + "\n";
     }
 }
