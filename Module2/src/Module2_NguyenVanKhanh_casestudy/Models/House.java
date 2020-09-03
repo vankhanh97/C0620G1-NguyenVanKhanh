@@ -37,20 +37,20 @@ public class House extends Services {
 
     @Override
     public void showInfor() {
-        System.out.println("House có ID: " + id + "\n" +
-                "Tên dịch vụ: " + tenDichVu + "\n" +
-                "Diện tích sử dụng: " + dienTichSuDung + "\n" +
-                "Chi phí thuê: " + chiPhiThue + "\n" +
-                "Số lượng người thuê tối đa: " + soLuongNguoiThueToiDa + "\n" +
-                "Kiểu thuê: " + kieuThue + "\n" +
+        System.out.println("House có ID: " + getId() + "\n" +
+                "Tên dịch vụ: " + getTenDichVu() + "\n" +
+                "Diện tích sử dụng: " + getDienTichSuDung() + "\n" +
+                "Chi phí thuê: " + getChiPhiThue() + "\n" +
+                "Số lượng người thuê tối đa: " + getSoLuongNguoiThueToiDa() + "\n" +
+                "Kiểu thuê: " + getKieuThue() + "\n" +
                 "Tiêu chuẩn phòng: " + tieuChuanPhong + "\n" +
                 "Số tầng: " + soTang);
     }
 
     @Override
     public String toString() {
-        return id + "," + tenDichVu + "," + dienTichSuDung + "," + soLuongNguoiThueToiDa +
-                "," + kieuThue + "," + tieuChuanPhong + "," + soTang + "\n";
+        return getId() + "," + getTenDichVu() + "," + getDienTichSuDung() + "," + getChiPhiThue() + "," + getSoLuongNguoiThueToiDa() +
+                "," + getKieuThue() + "," + tieuChuanPhong + "," + soTang + "\n";
     }
 
 }

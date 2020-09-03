@@ -1,9 +1,9 @@
 package Module2_NguyenVanKhanh_casestudy.Models;
 
 
-import Module2_NguyenVanKhanh_casestudy.Models.Services;
 
 public class Villa extends Services {
+
     public String getTieuChuanPhong() {
         return tieuChuanPhong;
     }
@@ -45,12 +45,12 @@ public class Villa extends Services {
 
     @Override
     public void showInfor() {
-        System.out.println("House có ID: " + id + "\n" +
-                "Tên dịch vụ: " + tenDichVu + "\n" +
-                "Diện tích sử dụng: " + dienTichSuDung + "\n" +
-                "Chi phí thuê: " + chiPhiThue + "\n" +
-                "Số lượng người thuê tối đa: " + soLuongNguoiThueToiDa + "\n" +
-                "Kiểu thuê: " + kieuThue + "\n" +
+        System.out.println("House có ID: " + getId() + "\n" +
+                "Tên dịch vụ: " + getTenDichVu() + "\n" +
+                "Diện tích sử dụng: " + getDienTichSuDung() + "\n" +
+                "Chi phí thuê: " + getChiPhiThue() + "\n" +
+                "Số lượng người thuê tối đa: " + getSoLuongNguoiThueToiDa() + "\n" +
+                "Kiểu thuê: " + getKieuThue() + "\n" +
                 "Tiêu chuẩn phòng: " + tieuChuanPhong + "\n" +
                 "Số tầng: " + soTang + "\n" +
                 "Diện tích hồ bơi: " + dienTichHoBoi);
@@ -59,7 +59,9 @@ public class Villa extends Services {
 
     @Override
     public String toString() {
-        return id + "," + tenDichVu + "," + dienTichSuDung + ","+chiPhiThue +","+ soLuongNguoiThueToiDa +
-                "," + kieuThue + "," + tieuChuanPhong + "," + dienTichHoBoi + "," + soTang+"\n";
+        return getId() + "," + getTenDichVu() + "," + getDienTichSuDung() + "," + getChiPhiThue() + "," + getSoLuongNguoiThueToiDa() +
+                "," + getKieuThue() + "," + tieuChuanPhong + "," + dienTichHoBoi + "," + soTang + "\n";
     }
+
+
 }

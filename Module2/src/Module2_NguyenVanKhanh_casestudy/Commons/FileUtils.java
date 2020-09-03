@@ -20,17 +20,16 @@ public class FileUtils {
 
 
     public static List<String> readCSV(String path) throws IOException {
-        List<String> arrList = null;
+        List<String> arrList;
         File file = new File(path);
         FileReader fileReader = new FileReader(file);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         String line;
         String[] temp;
+        arrList = new ArrayList<>();
         while ((line = bufferedReader.readLine()) != null) {
             temp = line.split(",");
-            arrList = new ArrayList<>();
-            for (int i = 0 ; i<temp.length;i++)
-            arrList.add(temp[i]);
+            arrList.addAll(Arrays.asList(temp));
         }
         bufferedReader.close();
         return arrList;

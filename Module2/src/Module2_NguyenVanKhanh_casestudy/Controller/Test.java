@@ -6,7 +6,7 @@ import static Module2_NguyenVanKhanh_casestudy.Controller.MainController.*;
 
 public class Test {
     public static void main(String[] args) throws IOException {
+dislayMainMenu();
 
-        showServices();
     }
 }
