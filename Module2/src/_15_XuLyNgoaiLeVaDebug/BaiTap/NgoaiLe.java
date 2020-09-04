@@ -20,7 +20,7 @@ public class NgoaiLe {
             else
                 System.out.println("Hình có các cạnh trên là tam giác");
 
-        } catch (Exception e) {
+        } catch (IllegalTriangleException e) {
             e.printStackTrace();
         }
     }
