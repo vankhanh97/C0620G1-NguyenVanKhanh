@@ -17,7 +17,7 @@ public class Regex {
     private static final String SDT_REGEX = "^[0-9]{10}";
     private static final String EMAIL_REGEX = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
 private static final String SONGUYENDUONG_REGEX = "^[0-9]";
-    public static boolean valid_soNguyenDuong(int regex) {
+    public static boolean valid_soNguyenDuong(String regex) {
         Pattern pattern = Pattern.compile(SONGUYENDUONG_REGEX);
         Matcher matcher = pattern.matcher(regex);
         return matcher.matches();

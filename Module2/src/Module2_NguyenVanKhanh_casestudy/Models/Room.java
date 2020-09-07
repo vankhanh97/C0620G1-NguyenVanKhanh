@@ -23,7 +23,7 @@ public class Room extends Services {
 
     @Override
     public void showInfor() {
-        System.out.println("House có ID: " + getId() + "\n" +
+        System.out.println("Room có ID: " + getId() + "\n" +
                 "Tên dịch vụ: " + getTenDichVu() + "\n" +
                 "Diện tích sử dụng: " + getDienTichSuDung() + "\n" +
                 "Chi phí thuê: " + getChiPhiThue() + "\n" +

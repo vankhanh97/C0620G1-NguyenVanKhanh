@@ -45,7 +45,7 @@ public class Villa extends Services {
 
     @Override
     public void showInfor() {
-        System.out.println("House có ID: " + getId() + "\n" +
+        System.out.println("Villa có ID: " + getId() + "\n" +
                 "Tên dịch vụ: " + getTenDichVu() + "\n" +
                 "Diện tích sử dụng: " + getDienTichSuDung() + "\n" +
                 "Chi phí thuê: " + getChiPhiThue() + "\n" +

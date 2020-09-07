@@ -3,10 +3,7 @@ package Module2_NguyenVanKhanh_casestudy.Controller;
 import Module2_NguyenVanKhanh_casestudy.Commons.FileUtils;
 import Module2_NguyenVanKhanh_casestudy.Commons.SortCustomer;
 import Module2_NguyenVanKhanh_casestudy.Exception.*;
-import Module2_NguyenVanKhanh_casestudy.Models.Customer;
-import Module2_NguyenVanKhanh_casestudy.Models.House;
-import Module2_NguyenVanKhanh_casestudy.Models.Room;
-import Module2_NguyenVanKhanh_casestudy.Models.Villa;
+import Module2_NguyenVanKhanh_casestudy.Models.*;
 
 import java.io.IOException;
 import java.util.*;
@@ -41,7 +38,13 @@ public class MainController {
                 showInfomationCustomer();
                 break;
             case 5:
-
+                addNewBooking();
+                break;
+            case 6:
+                showInfoEmployee();
+                break;
+            case 7:
+                System.exit(0);
         }
 
     }
@@ -461,12 +464,12 @@ public class MainController {
     public static void addNewBooking() throws IOException {
         ArrayList<Customer> customers = arrayListInfomationCustomer();
         Scanner sc = new Scanner(System.in);
-        System.out.println("Lựa chọn khách hàng theo số thứ tự: ");
         showInfomationCustomer();
-        int choice = sc.nextInt();
+        System.out.println("Lựa chọn khách hàng theo số thứ tự: ");
+        String choice = sc.nextLine();
         do {
-            if (choice > 0 && valid_soNguyenDuong(choice)) {
-                System.out.println(customers.get(choice - 1));
+            if (Integer.parseInt(choice) > 0 && valid_soNguyenDuong(choice)) {
+                System.out.println(customers.get(Integer.parseInt(choice) - 1));
                 break;
             }
         } while (true);
@@ -477,44 +480,74 @@ public class MainController {
         switch (choice1) {
             case 1:
                 List<String> arrList = readCSV("D:\\C0620G1-NguyenVanKhanh\\Module2\\src\\Module2_NguyenVanKhanh_casestudy\\Data\\Villa.csv");
-              ArrayList<Villa>villas =new ArrayList<>();
+                ArrayList<Villa> villas = new ArrayList<>();
                 while (arrList.size() != 0) {
                     Villa villa = new Villa(arrList.get(0), arrList.get(1), arrList.get(2), arrList.get(3), arrList.get(4), arrList.get(5)
                             , arrList.get(6), arrList.get(7), arrList.get(8));
                     villas.add(villa);
                     arrList.subList(0, 9).clear();
                 }
-                for (Villa villa:villas){
+                for (Villa villa : villas) {
                     villa.showInfor();
                 }
+                System.out.println("Nhập số Villa mong muốn theo thứ tự: ");
+                int choice2 = sc.nextInt();
+                FileUtils.writeCSV(customers.get(Integer.parseInt(choice) - 1), "D:\\C0620G1-NguyenVanKhanh\\Module2\\src\\Module2_NguyenVanKhanh_casestudy\\Data\\Booking.csv");
+                FileUtils.writeCSV(villas.get(choice2 - 1), "D:\\C0620G1-NguyenVanKhanh\\Module2\\src\\Module2_NguyenVanKhanh_casestudy\\Data\\Booking.csv");
+                System.out.println("Thao tác thành công!");
                 break;
             case 2:
                 List<String> arrList1 = readCSV("D:\\C0620G1-NguyenVanKhanh\\Module2\\src\\Module2_NguyenVanKhanh_casestudy\\Data\\House.csv");
-                ArrayList<House>houses =new ArrayList<>();
+                ArrayList<House> houses = new ArrayList<>();
                 while (arrList1.size() != 0) {
                     House house = new House(arrList1.get(0), arrList1.get(1), arrList1.get(2), arrList1.get(3), arrList1.get(4), arrList1.get(5)
                             , arrList1.get(6), arrList1.get(7));
                     houses.add(house);
                     arrList1.subList(0, 8).clear();
                 }
-                for (House house:houses){
+                for (House house : houses) {
                     house.showInfor();
                 }
+                System.out.println("Nhập số House mong muốn theo thứ tự: ");
+                int choice3 = sc.nextInt();
+                FileUtils.writeCSV(customers.get(Integer.parseInt(choice) - 1), "D:\\C0620G1-NguyenVanKhanh\\Module2\\src\\Module2_NguyenVanKhanh_casestudy\\Data\\Booking.csv");
+                FileUtils.writeCSV(houses.get(choice3 - 1), "D:\\C0620G1-NguyenVanKhanh\\Module2\\src\\Module2_NguyenVanKhanh_casestudy\\Data\\Booking.csv");
+                System.out.println("Thao tác thành công!");
                 break;
             case 3:
                 List<String> arrList2 = readCSV("D:\\C0620G1-NguyenVanKhanh\\Module2\\src\\Module2_NguyenVanKhanh_casestudy\\Data\\Room.csv");
-                ArrayList<Room>rooms =new ArrayList<>();
+                ArrayList<Room> rooms = new ArrayList<>();
                 while (arrList2.size() != 0) {
                     Room room = new Room(arrList2.get(0), arrList2.get(1), arrList2.get(2), arrList2.get(3), arrList2.get(4), arrList2.get(5)
                             , arrList2.get(6));
                     rooms.add(room);
                     arrList2.subList(0, 7).clear();
                 }
-                for (Room room:rooms){
+                for (Room room : rooms) {
                     room.showInfor();
                 }
+                System.out.println("Nhập số Room mong muốn theo thứ tự: ");
+                int choice4 = sc.nextInt();
+                FileUtils.writeCSV(customers.get(Integer.parseInt(choice) - 1), "D:\\C0620G1-NguyenVanKhanh\\Module2\\src\\Module2_NguyenVanKhanh_casestudy\\Data\\Booking.csv");
+                FileUtils.writeCSV(rooms.get(choice4 - 1), "D:\\C0620G1-NguyenVanKhanh\\Module2\\src\\Module2_NguyenVanKhanh_casestudy\\Data\\Booking.csv");
+                System.out.println("Thao tác thành công!");
                 break;
         }
+    }
+
+    public static void showInfoEmployee() throws IOException {
+        List<String> arrList = readCSV("D:\\C0620G1-NguyenVanKhanh\\Module2\\src\\Module2_NguyenVanKhanh_casestudy\\Data\\Employee.csv");
+        Map<String, Employee> employees = new LinkedHashMap<>();
+        while (arrList.size() != 0) {
+            Employee employee = new Employee(arrList.get(0), arrList.get(1), arrList.get(2), arrList.get(3));
+            employees.put(arrList.get(0), employee);
+            arrList.subList(0, 4).clear();
+        }
+
+        for (Map.Entry<String,Employee> employeeEntry:employees.entrySet()) {
+            System.out.print(employeeEntry.getValue());
+        }
+
     }
 }
 
