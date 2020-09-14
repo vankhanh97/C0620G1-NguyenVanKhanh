@@ -22,35 +22,34 @@ public class Cinema {
         }
     }
 
-    public static int ticked = 3;
+    public static int ticked = 4;
     public static Queue<Customer> customerQueue = new LinkedList<>();
 
     public static void customerBuyStick() {
-        System.out.println("List customer:");
+        System.out.println("Danh sách khách hàng:");
         for (Customer customer : customerList) {
             customer.showInfomationCustomer();
         }
         Customer customer = null;
         if (ticked > 0) {
-            System.out.println("Enter the customer buy ticked: ");
+            System.out.println("Nhập khách hàng mua vé: ");
             int customerBuyTick = scanner.nextInt();
             for (int i = 1; i <= customerList.size(); i++) {
                 if (i == customerBuyTick) {
                     customer = customerList.get(i - 1);
-                    customer.showInfomationCustomer();
                 }
             }
         }
         customerQueue.add(customer);
         ticked--;
         if (ticked == 0) {
-            System.out.println("Sold out");
-            System.out.println("List customer buy ticked: ");
-            int i = 1;
+
+            System.out.println("Danh sách khách hàng mua vé: ");
             for (Customer customers : customerQueue) {
                 customers.showInfomationCustomer();
-                i++;
             }
+            System.out.println("Hết vé" +
+                    "----------------------------------------------------");
         }
     }
 

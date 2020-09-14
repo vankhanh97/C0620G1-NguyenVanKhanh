@@ -1,27 +1,22 @@
-package Module2_NguyenVanKhanh_casestudy.Commons;
-
-
-import Module2_NguyenVanKhanh_casestudy.Models.Villa;
+package Thi.commons;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class FileUtils {
+public class File {
     public static void writeCSV(Object object, String path) throws IOException {
-        File file = new File(path);
-        FileWriter fileWriter = new FileWriter(file, false);
+        java.io.File file = new java.io.File(path);
+        FileWriter fileWriter = new FileWriter(file, true);
         BufferedWriter buffWrite = new BufferedWriter(fileWriter);
         buffWrite.write(object.toString());
         buffWrite.flush();
         buffWrite.close();
     }
-
-
     public static List<String> readCSV(String path) throws IOException {
         List<String> arrList;
-        File file = new File(path);
+        java.io.File file = new java.io.File(path);
         FileReader fileReader = new FileReader(file);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         String line;
@@ -35,4 +30,3 @@ public class FileUtils {
         return arrList;
     }
 }
-

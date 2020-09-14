@@ -549,5 +549,11 @@ public class MainController {
         }
 
     }
+
+    public static void main(String[] args) throws IOException {
+        while (true){
+            dislayMainMenu();
+        }
+    }
 }
 
