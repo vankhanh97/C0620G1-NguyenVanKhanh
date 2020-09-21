@@ -19,39 +19,63 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30d017a4-80ca-4a8b-97aa-53df0398c54c" name="Default Changelist" comment="" />
+    <list default="true" id="b2533d3a-3701-4cb5-8d09-4e3aa4411e7e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/_6_CSS-CascadingStyleStylesheet/BaiTap/DinhDangVanBan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_6_CSS-CascadingStyleStylesheet/BaiTap/NhungCssVaoHTML.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_6_CSS-CascadingStyleStylesheet/BaiTap/NhungCssVaoHTML.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_6_CSS-CascadingStyleStylesheet/BaiTap/TaoTrangDocTruyen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_6_CSS-CascadingStyleStylesheet/BaiTap/truyen1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_6_CSS-CascadingStyleStylesheet/BaiTap/truyen2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Module1/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1hnd6GFt5oqTbFlBPPlkcYJCUSs" />
+  <component name="ProjectId" id="1hnlP2xzOoPcGhoFEFwvcRu5UhA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Module3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\C0620G1-NguyenVanKhanh\Module3" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="30d017a4-80ca-4a8b-97aa-53df0398c54c" name="Default Changelist" comment="" />
-      <created>1600650624384</created>
+      <changelist id="b2533d3a-3701-4cb5-8d09-4e3aa4411e7e" name="Default Changelist" comment="" />
+      <created>1600654710205</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1600650624384</updated>
-      <workItem from="1600650626522" duration="272000" />
-      <workItem from="1600650928165" duration="27000" />
-      <workItem from="1600652909409" duration="111000" />
-      <workItem from="1600654673645" duration="35000" />
+      <updated>1600654710205</updated>
+      <workItem from="1600654711853" duration="4272000" />
+      <workItem from="1600675530645" duration="450000" />
     </task>
     <servers />
   </component>
@@ -71,9 +95,13 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1600654700239">
+    <state x="184" y="0" key="SettingsEditor" timestamp="1600656049862">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1600654700239" />
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1600656049862" />
+    <state x="339" y="157" key="run.anything.popup" timestamp="1600655831917">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1600655831917" />
   </component>
 </project>
