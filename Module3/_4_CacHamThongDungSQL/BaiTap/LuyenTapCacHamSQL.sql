@@ -20,8 +20,8 @@ insert into danhsachlop(ten,tuoi,khoa_hoc,so_tien)
  ('Huong',20,'TCNH',200000);
 
 select `ten`, sum(so_tien)  from danhsachlop where ten = 'huong';
-select ten, sum(so_tien)
+select ten tên, sum(so_tien) tiền
  from danhsachlop group by ten;
  
- select distinct ten from danhsachlop;
+ select distinct ten tên from danhsachlop;
  
