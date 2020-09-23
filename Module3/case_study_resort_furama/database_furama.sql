@@ -1,4 +1,4 @@
-
+drop database if exists furama_resort_management;
 create database furama_resort_management;
 
 use furama_resort_management;
@@ -69,6 +69,14 @@ dia_chi varchar(45),
 foreign key (id_loai_khach) references loai_khach(id_loai_khach)
 );
 
+create table dich_vu_di_kem(
+id_dich_vu_di_kem int primary key,
+ten_dich_vu_di_kem varchar(45),
+gia int,
+don_vi varchar(45),
+trang_thai_kha_dung varchar(45));
+
+
 
 create table hop_dong(
 id_hop_dong int primary key,
@@ -83,22 +91,16 @@ foreign key (id_nhan_vien) references nhan_vien(id_nhan_vien),
 foreign key (id_khach_hang) references khach_hang(id_khach_hang),
 foreign key (id_dich_vu) references dich_vu(id_dich_vu)
 );
-
-create table dich_vu_di_kem(
-id_dich_vu_di_kem int primary key,
-ten_dich_vu_di_kem varchar(45),
-gia int,
-don_vi varchar(45),
-trang_thai_kha_dung varchar(45));
-
 create table hop_dong_chi_tiet(
 id_hop_dong_chi_tiet int primary key,
 id_dich_vu_di_kem int,
 id_hop_dong int,
 so_luong int,
-foreign key (id_dich_vu_di_kem) references dich_vu_di_kem(id_dich_vu_di_kem),
-foreign key (id_hop_dong) references hop_dong(id_hop_dong)
+foreign key (id_hop_dong) references hop_dong(id_hop_dong),
+foreign key (id_dich_vu_di_kem) references dich_vu_di_kem(id_dich_vu_di_kem)
 );
+
+
 
 
 

@@ -23,3 +23,10 @@ order by 'đếm số lượng đặt phòng';
 -- 5.	Hiển thị IDKhachHang, HoTen, TenLoaiKhach, IDHopDong, TenDichVu, NgayLamHopDong, NgayKetThuc, TongTien 
 -- (Với TongTien được tính theo công thức như sau: ChiPhiThue + SoLuong*Gia, với SoLuong và Giá là từ bảng DichVuDiKem) 
 -- cho tất cả các Khách hàng đã từng đặt phỏng. (Những Khách hàng nào chưa từng đặt phòng cũng phải hiển thị ra).
+select k.id_khach_hang,k.ho_ten,loai_khach.ten_loai_khach,hd.id_hop_dong,dv.ten_dich_vu,hd.ngay_lam_hop_dong,hd.ngay_ket_thuc-- ,sum(dv.chi_phi_thue+hop_dong_chi_tiet.so_luong*dvdk.gia)
+from khach_hang k
+ join loai_khach on loai_khach.id_loai_khach = k.id_loai_khach
+ join hop_dong hd on hd.id_khach_hang = k.id_khach_hang
+ join dich_vu dv on dv.id_dich_vu = hd.id_dich_vu
+ join hop_dong_chi_tiet on hd.id_hop_dong = hop_dong_chi_tiet.id_hop_dong
+ join dich_vu_di_kem dvdk on dvdk.id_dich_vu_di_kem = hop_dong_chi_tiet.id_dich_vu_di_kem;
