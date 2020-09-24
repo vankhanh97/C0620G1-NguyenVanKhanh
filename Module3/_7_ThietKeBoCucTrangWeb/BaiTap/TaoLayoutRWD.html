@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <STYLE>
+        body {
+            font-family: Arial;
+        }
+
+        #login {
+            text-align: right;
+            margin-left: 650px;
+            float: left;
+        }
+
+        #menu {
+            height: 30px;
+            padding: 0;
+            margin: 0;
+            background-color: #000000;
+            border: 1px solid #CDCDCD;
+        }
+
+        #menu ul, #menu li {
+            padding: 0;
+            margin: 0;
+        }
+
+        #menu li {
+            position: relative;
+            float: left;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu li a {
+            width: 100px;
+            height: 30px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            line-height: 30px;
+            background-color: black;
+            color: white;
+        }
+
+        #menu ul ul li a {
+            width: 200px;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        #menu li a:hover {
+            background-color: red;
+        }
+
+        #menu ul ul {
+            position: absolute;
+            top: 30px;
+            left: 15px;
+            visibility: hidden;
+        }
+
+        #menu ul li:hover ul {
+            visibility: visible;
+        }
+
+        #left {
+            float: left;
+            width: 22%;
+            height: 500px;
+            margin-left: 1px;
+            background: #8b9494;
+            text-align: center;
+            font-size: x-large;
+            text-decoration: none;
+        }
+        #left a {
+            text-decoration: none;
+        }
+        #body{
+            float: left;
+            width: 65%;
+            height: 500px;
+            margin-left: 1px;
+            background: #ffffff;
+        }
+        #right{
+            float: left;
+            width: 12.7%;
+            height: 500px;
+            margin-left: 1px;
+            background: #606767;
+        }
+        #footer{
+            background: #525656;
+            height: 50px;
+            clear: both;
+            margin-left: 1px;
+            margin-right: 1px;
+        }
+        @media screen and (max-width: 768px){
+            body {
+                font-family: Arial;
+            }
+
+            #login {
+                text-align: right;
+                margin-left: 650px;
+                float: left;
+            }
+
+            #menu {
+                height: 30px;
+                padding: 0;
+                margin: 0;
+                background-color: #000000;
+                border: 1px solid #CDCDCD;
+            }
+
+            #menu ul, #menu li {
+                padding: 0;
+                margin: 0;
+            }
+
+            #menu li {
+                position: relative;
+                float: left;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            #menu li a {
+                width: 100px;
+                height: 30px;
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                line-height: 30px;
+                background-color: black;
+                color: white;
+            }
+
+            #menu ul ul li a {
+                width: 200px;
+                text-align: left;
+                padding-left: 20px;
+            }
+
+            #menu li a:hover {
+                background-color: red;
+            }
+
+            #menu ul ul {
+                position: absolute;
+                top: 30px;
+                left: 15px;
+                visibility: hidden;
+            }
+
+            #menu ul li:hover ul {
+                visibility: visible;
+            }
+
+            #left {
+                float: left;
+                width: 22%;
+                height: 500px;
+                margin-left: 1px;
+                background: #8b9494;
+                text-align: center;
+                font-size: x-large;
+                text-decoration: none;
+            }
+            #left a {
+                text-decoration: none;
+            }
+            #body{
+                float: left;
+                width: 65%;
+                height: 500px;
+                margin-left: 1px;
+                background: #ffffff;
+            }
+            #right{
+                float: left;
+                width: 12.7%;
+                height: 500px;
+                margin-left: 1px;
+                background: #606767;
+            }
+            #footer{
+                background: #525656;
+                height: 50px;
+                clear: both;
+                margin-left: 1px;
+                margin-right: 1px;
+            }
+        }
+    </STYLE>
+</head>
+<body>
+<div id="menu">
+    <ul>
+        <li><a href="#">Logo</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Project</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a id="login" href="#">Login</a></li>
+
+    </ul>
+</div>
+<div id="left">
+    <a href="#">Left</a>
+</div>
+<div id="body">
+    <a href="#">Welcome</a>
+</div>
+<div id="right">
+    <a href="#">Right</a>
+</div>
+<div id="footer">
+    <a>Footer</a>
+</div>
+</body>
+</html>
