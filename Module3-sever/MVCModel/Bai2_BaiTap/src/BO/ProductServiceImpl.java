@@ -14,12 +14,12 @@ public class ProductServiceImpl implements ProductService {
 
     static {
         products = new HashMap<>();
-        products.put(1, new Product(1, "Chuối", "1000", "Hanoi","Việt Nam"));
-        products.put(2, new Product(2, "Xoài", "2000", "Danang","Việt Nam"));
-        products.put(3 ,new Product(3, "Táo", "3000", "Saigon","Việt Nam"));
-        products.put(4  ,new Product(4, "Ổi", "4000", "Beijin","Việt Nam"));
-        products.put(5 ,new Product(5, "Dâu", "5000", "Miami","Việt Nam"));
-        products.put(6 ,new Product(6, "Cam", "6000", "Newyork","Việt Nam"));
+        products.put(1, new Product(1, "Chuối", "1000", "Hanoi", "Việt Nam"));
+        products.put(2, new Product(2, "Xoài", "2000", "Danang", "Việt Nam"));
+        products.put(3, new Product(3, "Táo", "3000", "Saigon", "Việt Nam"));
+        products.put(4, new Product(4, "Ổi", "4000", "Beijin", "Việt Nam"));
+        products.put(5, new Product(5, "Dâu", "5000", "Miami", "Việt Nam"));
+        products.put(6, new Product(6, "Cam", "6000", "Newyork", "Việt Nam"));
     }
 
     @Override
@@ -32,23 +32,19 @@ public class ProductServiceImpl implements ProductService {
         products.put(product.getId(), product);
     }
 
-    @Override
-    public Product findByName(String name) {
-        return products.get(name);
-    }
 
     @Override
-    public Product findById(String id) {
+    public Product findById(int id) {
         return products.get(id);
     }
 
     @Override
-    public void update(Integer id, Product product) {
+    public void update(int id, Product product) {
         products.put(id, product);
     }
 
     @Override
-    public void remove(String name) {
-        products.remove(name);
+    public void remove(int id) {
+        products.remove(id);
     }
 }

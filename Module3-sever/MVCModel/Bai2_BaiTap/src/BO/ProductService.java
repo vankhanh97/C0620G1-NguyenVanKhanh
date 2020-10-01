@@ -11,11 +11,10 @@ public interface ProductService {
 
     void save(Product product);
 
-    Product findByName(String name);
 
-    Product findById(String id);
+    Product findById(int id);
 
-    void update(Integer id, Product product);
+    void update(int id, Product product);
 
-    void remove(String name);
+    void remove(int id);
 }

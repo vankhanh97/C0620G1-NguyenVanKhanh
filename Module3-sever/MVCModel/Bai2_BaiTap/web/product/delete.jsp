@@ -20,7 +20,7 @@
             </tr>
             <tr>
                 <td>Cost:</td>
-                <td>${requestScope["product"].getCost}</td>
+                <td>${requestScope["product"].getCost()}</td>
             </tr>
             <tr>
                 <td>Product Description:</td>
