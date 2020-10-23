@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View</title>
+</head>
+<body>
+<a href="/create"> Create Form</a>
+<table border="1">
+<tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Phone Number</th>
+    <th>Age</th>
+    <th>Email</th>
+</tr>
+<th:block th:each="form:${listForm}">
+<tr>
+    <td th:text="${form.firstName}"></td>
+    <td th:text="${form.lastName}"></td>
+    <td th:text="${form.phoneNumber}"></td>
+    <td th:text="${form.age}"></td>
+    <td th:text="${form.email}"></td>
+</tr>
+</th:block>
+</table>
+</body>
+</html>
