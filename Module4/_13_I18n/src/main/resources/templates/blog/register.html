@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Register</title>
 </head>
+<h1>Register</h1>
 <body>
-$END$
+<form action="/blog/register" method="post" th:object="${appUser}">
+    <p>Username: </p>
+    <input type="text" name="username" th:field="*{userName}"/>
+    <p th:text="${message}"></p>
+    <p>Password: </p>
+    <input type="password" name="password" th:field="*{encrytedPassword}"/>
+    <div>
+        <input type="checkbox" id="admin" value="1" name="role">
+        <label for="admin">Admin</label>
+    </div>
+    <div>
+        <input type="checkbox" id="user" value="2" name="role">
+        <label for="user">User</label>
+    </div>
+    <input type="submit" value="Save">
+</form>
 </body>
 </html>

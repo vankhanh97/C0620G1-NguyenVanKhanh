@@ -1,8 +1,9 @@
-package com.example.blog_app.service.impl;
+package com.case_study.case_study_m4.service.Impl;
 
-import com.example.blog_app.entity.AppUser;
-import com.example.blog_app.repository.AppUserRepository;
-import com.example.blog_app.repository.BlogRepository;
+
+import com.case_study.case_study_m4.entity.AppUser;
+import com.case_study.case_study_m4.repository.AppUserRepository;
+import com.case_study.case_study_m4.service.WebUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

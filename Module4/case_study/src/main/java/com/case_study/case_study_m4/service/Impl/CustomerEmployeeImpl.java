@@ -1,8 +1,11 @@
 package com.case_study.case_study_m4.service.Impl;
 
 import com.case_study.case_study_m4.entity.Customer;
+import com.case_study.case_study_m4.entity.Employee;
 import com.case_study.case_study_m4.repository.CustomerRepository;
+import com.case_study.case_study_m4.repository.EmployeeRepository;
 import com.case_study.case_study_m4.service.CustomerService;
+import com.case_study.case_study_m4.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -11,18 +14,18 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class CustomerServiceImpl implements CustomerService {
+public class CustomerEmployeeImpl implements EmployeeService {
     @Autowired
-    private CustomerRepository customerRepository;
+    private EmployeeRepository employeeRepository;
 
     @Override
-    public List<Customer> findAll() {
-        return this.customerRepository.findAll();
+    public List<Employee> findAll() {
+        return this.employeeRepository.findAll();
     }
 
     @Override
-    public Page<Customer> findAll(Pageable pageable) {
-        return this.customerRepository.findAll(pageable);
+    public Page<Employee> findAll(Pageable pageable) {
+        return this.employeeRepository.findAll(pageable);
     }
 
 //    @Override
@@ -33,23 +36,23 @@ public class CustomerServiceImpl implements CustomerService {
 //    }
 
     @Override
-    public Customer findById(Integer id) {
-        return this.customerRepository.findById(id).orElse(null);
+    public Employee findById(Integer id) {
+        return this.employeeRepository.findById(id).orElse(null);
     }
 
     @Override
-    public void save(Customer customer) {
-        this.customerRepository.save(customer);
+    public void save(Employee customer) {
+        this.employeeRepository.save(customer);
     }
 
     @Override
     public void delete(Integer id) {
-        this.customerRepository.deleteById(id);
+        this.employeeRepository.deleteById(id);
     }
 
     @Override
-    public Page<Customer> findByNameContaining(Pageable pageable, String name) {
-        return this.customerRepository.findAllByNameContaining(pageable, name);
+    public Page<Employee> findByNameContaining(Pageable pageable, String name) {
+        return this.employeeRepository.findAllByNameContaining(pageable, name);
 
     }
 }

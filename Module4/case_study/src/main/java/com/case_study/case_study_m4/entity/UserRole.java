@@ -1,4 +1,4 @@
-package com.example.blog_app.entity;
+package com.case_study.case_study_m4.entity;
 
 import javax.persistence.*;
 
@@ -15,16 +15,16 @@ public class UserRole {
 
     @ManyToOne
     @JoinColumn(name = "User_Id", nullable = false)
-    private AppUser appUser;
+    private com.case_study.case_study_m4.entity.AppUser appUser;
 
     @ManyToOne
     @JoinColumn(name = "Role_Id", nullable = false)
-    private com.example.blog_app.entity.AppRole appRole;
+    private com.case_study.case_study_m4.entity.AppRole appRole;
 
     public UserRole() {
     }
 
-    public UserRole(AppUser appUser, AppRole appRole) {
+    public UserRole(com.case_study.case_study_m4.entity.AppUser appUser, com.case_study.case_study_m4.entity.AppRole appRole) {
         this.appUser = appUser;
         this.appRole = appRole;
     }
@@ -37,19 +37,19 @@ public class UserRole {
         this.id = id;
     }
 
-    public AppUser getAppUser() {
+    public com.case_study.case_study_m4.entity.AppUser getAppUser() {
         return appUser;
     }
 
-    public void setAppUser(AppUser appUser) {
+    public void setAppUser(com.case_study.case_study_m4.entity.AppUser appUser) {
         this.appUser = appUser;
     }
 
-    public com.example.blog_app.entity.AppRole getAppRole() {
+    public com.case_study.case_study_m4.entity.AppRole getAppRole() {
         return appRole;
     }
 
-    public void setAppRole(com.example.blog_app.entity.AppRole appRole) {
+    public void setAppRole(com.case_study.case_study_m4.entity.AppRole appRole) {
         this.appRole = appRole;
     }
 

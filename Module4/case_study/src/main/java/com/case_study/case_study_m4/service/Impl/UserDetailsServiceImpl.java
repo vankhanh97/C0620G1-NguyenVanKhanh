@@ -3,6 +3,7 @@ package com.case_study.case_study_m4.service.Impl;
 
 import com.case_study.case_study_m4.entity.AppUser;
 import com.case_study.case_study_m4.entity.UserRole;
+import com.case_study.case_study_m4.repository.AppUserRepository;
 import com.case_study.case_study_m4.repository.UserRoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -20,7 +21,7 @@ import java.util.List;
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
-    private AppUser
+    private AppUserRepository appUserRepository;
 
     @Autowired
     private UserRoleRepository userRoleRepository;

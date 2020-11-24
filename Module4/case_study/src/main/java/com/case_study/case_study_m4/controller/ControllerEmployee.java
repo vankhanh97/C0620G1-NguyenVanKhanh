@@ -1,8 +1,10 @@
 package com.case_study.case_study_m4.controller;
 
 import com.case_study.case_study_m4.entity.Customer;
+import com.case_study.case_study_m4.entity.Employee;
 import com.case_study.case_study_m4.repository.CustomerTypeRepository;
 import com.case_study.case_study_m4.service.CustomerService;
+import com.case_study.case_study_m4.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -14,31 +16,30 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import java.util.Optional;
 
 @Controller
-@RequestMapping("/customer")
-public class ControllerCustomer {
+@RequestMapping("/employee")
+public class ControllerEmployee {
 
     @Autowired
-    private CustomerService customerService;
+    private EmployeeService employeeService;
 
-    @Autowired
-    private CustomerTypeRepository customerTypeRepository;
+
 
 
     @GetMapping("/")
-    public String goListCustomer(Model model, @PageableDefault(size = 2) Pageable pageable,
+    public String goListCustomer(Model model, @PageableDefault(size = 5) Pageable pageable,
                                  @RequestParam Optional<String> keyword) {
         String keywordOld = "";
         if (keyword.isPresent()) {
             keywordOld = keyword.get();
-            model.addAttribute("customerList", customerService.findByNameContaining(pageable, keywordOld));
+            model.addAttribute("employeeList", employeeService.findByNameContaining(pageable, keywordOld));
         } else {
-            model.addAttribute("customerList", customerService.findAll(pageable));
+            model.addAttribute("employeeList", employeeService.findAll(pageable));
 
         }
-        model.addAttribute("customer_type_list", customerTypeRepository.findAll());
+//        model.addAttribute("customer_type_list", customerTypeRepository.findAll());
         model.addAttribute("keywordOld", keywordOld);
-        model.addAttribute("customer", new Customer());
-        return "customer/list_customer";
+        model.addAttribute("employee", new Employee());
+        return "employee/list_employee";
     }
 
 //    @GetMapping("/create")
@@ -48,29 +49,28 @@ public class ControllerCustomer {
 //    }
 
     @PostMapping("/create")
-    public String saveCustomer(@ModelAttribute Customer customer, RedirectAttributes redirectAttributes) {
-        customerService.save(customer);
+    public String saveCustomer(@ModelAttribute Employee employee, RedirectAttributes redirectAttributes) {
+        employeeService.save(employee);
         String message = "Create Customer success!!!";
         redirectAttributes.addFlashAttribute("message", message);
-        return "redirect:/customer/";
+        return "redirect:/employee/";
     }
 
     @GetMapping("/delete")
     public String deleteCustomer(@RequestParam Integer id) {
-        customerService.delete(id);
-        return "redirect:/customer/";
+        employeeService.delete(id);
+        return "redirect:/employee/";
     }
 
-    @GetMapping("/update")
-    public String goUpdateCustomer(Model model, @RequestParam Integer id) {
-        model.addAttribute("customer", this.customerService.findById(id));
-        return "customer/update";
-    }
+//    @GetMapping("/update")
+//    public String goUpdateCustomer(Model model, @RequestParam Integer id) {
+//        model.addAttribute("customer", this.customerService.findById(id));
+//        return "customer/update_customer";
+//    }
+//
+//    @PostMapping("/update")
+//    public String updateCustomer(@ModelAttribute Customer customer) {
+//        this.customerService.save(customer);
+//        return "redirect:/list_customer/";}
 
-    @PostMapping("/update")
-    public String updateCustomer(@ModelAttribute Customer customer) {
-        this.customerService.save(customer);
-        return "redirect:/customer/";
-
-    }
 }

@@ -1,7 +1,8 @@
-package com.codegym.repository;
+package com.example.blog_app.repository;
 
-import com.codegym.entity.AppUser;
-import com.codegym.entity.UserRole;
+
+import com.example.blog_app.entity.AppUser;
+import com.example.blog_app.entity.UserRole;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

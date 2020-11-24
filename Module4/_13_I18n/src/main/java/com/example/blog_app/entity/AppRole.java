@@ -1,10 +1,10 @@
-package com.codegym.entity;
+package com.example.blog_app.entity;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "App_Role", //
-        uniqueConstraints = { //
+@Table(name = "App_Role",
+        uniqueConstraints = {
                 @UniqueConstraint(name = "APP_ROLE_UK", columnNames = "Role_Name") })
 public class AppRole {
 
@@ -15,6 +15,15 @@ public class AppRole {
 
     @Column(name = "Role_Name", length = 30, nullable = false)
     private String roleName;
+
+    public AppRole(Long roleId, String roleName) {
+        this.roleId = roleId;
+        this.roleName = roleName;
+    }
+
+    public AppRole() {
+
+    }
 
     public Long getRoleId() {
         return roleId;

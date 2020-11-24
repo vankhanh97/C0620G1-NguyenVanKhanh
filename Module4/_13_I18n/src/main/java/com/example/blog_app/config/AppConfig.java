@@ -1,4 +1,4 @@
-package com.example.blog_app.controller;
+package com.example.blog_app.config;
 
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;

@@ -1,10 +1,10 @@
-package com.codegym.entity;
+package com.example.blog_app.entity;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "App_User", //
-        uniqueConstraints = { //
+@Table(name = "App_User",
+        uniqueConstraints = {
                 @UniqueConstraint(name = "APP_USER_UK", columnNames = "User_Name") })
 public class AppUser {
 
@@ -13,7 +13,7 @@ public class AppUser {
     @Column(name = "User_Id", nullable = false)
     private Long userId;
 
-    @Column(name = "User_Name", length = 36, nullable = false)
+    @Column(name = "User_Name", length = 36, nullable = false )
     private String userName;
 
     @Column(name = "Encryted_Password", length = 128, nullable = false)
@@ -21,6 +21,16 @@ public class AppUser {
 
     @Column(name = "Enabled", length = 1, nullable = false)
     private boolean enabled;
+
+    public AppUser( ) {
+    }
+
+    public AppUser(Long userId, String userName, String encrytedPassword, boolean enabled) {
+        this.userId = userId;
+        this.userName = userName;
+        this.encrytedPassword = encrytedPassword;
+        this.enabled = enabled;
+    }
 
     public Long getUserId() {
         return userId;

@@ -1,4 +1,4 @@
-package com.example.blog_app.entity;
+package com.case_study.case_study_m4.entity;
 
 import javax.persistence.*;
 

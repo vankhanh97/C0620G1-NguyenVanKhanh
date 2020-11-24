@@ -1,9 +1,10 @@
-package com.codegym.service.impl;
+package com.example.blog_app.service.impl;
 
-import com.codegym.entity.AppUser;
-import com.codegym.entity.UserRole;
-import com.codegym.repository.AppUserRepository;
-import com.codegym.repository.UserRoleRepository;
+
+import com.example.blog_app.entity.AppUser;
+import com.example.blog_app.entity.UserRole;
+import com.example.blog_app.repository.AppUserRepository;
+import com.example.blog_app.repository.UserRoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
